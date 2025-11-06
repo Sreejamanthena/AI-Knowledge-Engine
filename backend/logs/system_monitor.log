@@ -1,0 +1,10 @@
+2025-11-02T09:57:13.622006 Feedback recorded: {'id': 'fb_1', 'ticket_id': 't_1', 'article_id': 'art_3', 'correct': True, 'notes': 'Relevant recommendation', 'timestamp': '2025-11-02T09:57:13.611677'}
+2025-11-02T09:58:10.735796 Feedback recorded: {'id': 'fb_2', 'ticket_id': 't_2', 'article_id': 'art_1', 'correct': False, 'notes': 'Not a relevant suggestion', 'timestamp': '2025-11-02T09:58:10.731613'}
+2025-11-02T11:19:23.288273 Feedback recorded: {'id': 'fb_3', 'ticket_id': 't_2', 'article_id': 'art_1', 'correct': False, 'notes': 'Not a relevant suggestion', 'timestamp': '2025-11-02T11:19:23.283539'}
+2025-11-02T11:19:32.777493 Feedback recorded: {'id': 'fb_4', 'ticket_id': 't_1', 'article_id': 'art_3', 'correct': False, 'notes': 'Not a relevant suggestion', 'timestamp': '2025-11-02T11:19:32.773908'}
+2025-11-02T11:41:16.398612 Feedback recorded: {'id': 'fb_5', 'ticket_id': 't_1', 'article_id': 'art_3', 'correct': False, 'notes': 'Not a relevant suggestion', 'timestamp': '2025-11-02T11:41:16.394835'}
+2025-11-03T09:37:50.960238 Feedback recorded/updated: {'id': 'fb_1', 'ticket_id': 't_1', 'article_id': 'art_7', 'correct': True, 'notes': 'Relevant recommendation', 'timestamp': '2025-11-03T09:37:50.958237'}
+2025-11-03T09:38:09.156086 Feedback recorded/updated: {'id': 'fb_1', 'ticket_id': 't_1', 'article_id': 'art_7', 'correct': False, 'notes': 'Not a relevant suggestion', 'timestamp': '2025-11-03T09:38:09.154099'}
+2025-11-03T09:38:23.350882 Feedback recorded/updated: {'id': 'fb_1', 'ticket_id': 't_1', 'article_id': 'art_7', 'correct': True, 'notes': 'Relevant recommendation', 'timestamp': '2025-11-03T09:38:23.349883'}
+2025-11-03T10:32:00.404441 Feedback recorded/updated: {'id': 'fb_2', 'ticket_id': 't_2', 'article_id': 'art_11', 'correct': False, 'notes': 'Not a relevant suggestion', 'timestamp': '2025-11-03T10:32:00.402430'}
+2025-11-03T10:32:13.186066 Feedback recorded/updated: {'id': 'fb_1', 'ticket_id': 't_1', 'article_id': 'art_7', 'correct': False, 'notes': 'Not a relevant suggestion', 'timestamp': '2025-11-03T10:32:13.184316'}

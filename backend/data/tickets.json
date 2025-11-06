@@ -1,0 +1,20 @@
+[
+  {
+    "title": "unable to login to my account",
+    "description": "Whenever I try to log into my account, I get an 'Invalid credentials' error even though my password is correct. I also tried resetting the password, but it still doesn’t work.",
+    "customer_name": "sreeja",
+    "id": "t_1",
+    "status": "resolved",
+    "createdAt": "2025-11-03T09:37:18.915651",
+    "category": "Account",
+    "tags": [
+      "login issue",
+      "password reset",
+      "account access"
+    ],
+    "recommendedArticleIds": [
+      "art_7"
+    ],
+    "updatedAt": "2025-11-03T09:45:07.522452"
+  }
+]

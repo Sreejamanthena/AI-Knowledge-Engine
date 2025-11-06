@@ -1,0 +1,18 @@
+[
+  {
+    "id": "fb_1",
+    "ticket_id": "t_1",
+    "article_id": "art_7",
+    "correct": false,
+    "notes": "Not a relevant suggestion",
+    "timestamp": "2025-11-03T10:32:13.184316"
+  },
+  {
+    "id": "fb_2",
+    "ticket_id": "t_2",
+    "article_id": "art_11",
+    "correct": false,
+    "notes": "Not a relevant suggestion",
+    "timestamp": "2025-11-03T10:32:00.402430"
+  }
+]
