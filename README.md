@@ -1,178 +1,227 @@
-🤖 AI-Powered Support Ticket Resolution System
-🚀 Project Overview
+# 🤖 AI-Powered Support Ticket Resolution System
 
-The AI-Powered Support Ticket Resolution System is a full-stack intelligent automation platform designed to help customer support teams efficiently resolve issues by automatically classifying incoming tickets, recommending the most relevant knowledge base articles, and providing actionable analytics.
+### 🚀 Project Overview
 
-It combines FastAPI, React, and Groq-powered LLaMA intelligence to deliver real-time insights, accuracy tracking, and alert management.
+The **AI-Powered Support Ticket Resolution System** is a full-stack intelligent automation platform that helps customer support teams classify tickets, recommend the most relevant knowledge base (KB) articles, and track system performance in real time.
 
-🧩 Key Features
+This project uses **FastAPI (Python)** for the backend, **React.js** for the frontend, and integrates **Groq-powered LLaMA** for AI-driven classification, tagging, and recommendations.  
+It’s designed to improve support efficiency, accuracy, and proactive issue detection through real-time alerts and analytics.
 
-✅ AI-Based Ticket Classification
-Automatically identifies the category of customer issues (Billing, Account, Technical, Product, etc.) using LLaMA (via Groq API).
+---
 
-✅ Semantic Article Recommendation
-Uses intelligent text similarity, embeddings, and intent-based matching to recommend relevant KB articles.
+## 🧠 Key Features
 
-✅ Feedback-Driven Accuracy Learning
-Supports user feedback for each recommendation. If a user updates feedback, the latest input overwrites the previous one to ensure accuracy in evaluation.
+✅ **AI Ticket Classification**  
+Automatically identifies the type of ticket (Billing, Account, Technical, Product, etc.) using **LLaMA (Groq API)**.  
 
-✅ Alert System with Slack Integration
-Triggers alerts when accuracy drops below threshold (e.g. 60%), automatically sends them to Slack, and deletes them locally after successful delivery.
+✅ **Smart Knowledge Recommendations**  
+Finds and recommends the most relevant KB article based on text similarity, embeddings, and intent.  
 
-✅ Dataset Evaluation for Admins
-Allows administrators to evaluate any dataset (JSON format) and calculate system accuracy and coverage metrics.
+✅ **Feedback Learning System**  
+Overwrites previous feedback to maintain accurate, up-to-date evaluation metrics.  
 
-✅ Real-Time Dashboard
-A clean React-based interface to manage tickets, monitor analytics, check alerts, and perform predictions.
+✅ **Slack Alerts**  
+Automatically triggers and sends alerts when accuracy drops below a set threshold (e.g. 60%) and deletes them locally once sent.  
 
-🏗️ System Architecture
+✅ **Admin Evaluation Module**  
+Allows dataset accuracy evaluation and system performance checks.  
+
+✅ **Real-Time React Dashboard**  
+A modern web interface to manage tickets, run evaluations, check alerts, and view analytics.  
+
+---
+
+## 🏗️ System Architecture
+
 Frontend (React)
-      │
-      ▼
+│
+▼
 FastAPI Backend (app.py)
-      │
-      ▼
+│
+▼
 Recommender Engine (Groq-powered LLaMA)
-      │
-      ▼
-JSON Data Store (tickets, feedback, knowledge, alerts)
+│
+▼
+JSON Data Storage (tickets, feedback, knowledge, alerts)
 
-📂 Project Structure
-🖥️ Frontend — /frontend
+yaml
+Copy code
+
+---
+
+## 📂 Project Structure
+
+### 🖥️ Frontend — `/frontend`
 src/
 ├── pages/
-│   ├── Dashboard.jsx
-│   ├── TicketsPage.jsx
-│   ├── KnowledgePage.jsx
-│   ├── PredictPage.jsx
-│   ├── EvaluatePage.jsx
-│   ├── AlertsPage.jsx
-│   └── AnalyticsPage.jsx
+│ ├── TicketPage.jsx
+│ ├── KnowledgePage.jsx
+│ ├── PredictPage.jsx
+│ ├── EvaluatePage.jsx
+│ ├── AlertsPage.jsx
+│ ├── StatsPage.jsx
+│ └── ArticleDetailPage.jsx
 ├── components/
-│   ├── Navbar.jsx
-│   ├── TicketCard.jsx
-│   ├── ArticleCard.jsx
-│   ├── FeedbackForm.jsx
-│   └── Loader.jsx
+│ ├── Sidebar.jsx
+│ ├── TicketCard.jsx
+│ └── Loader.jsx
 ├── App.jsx
 ├── index.js
-└── App.css
+└── styles.css
 
-⚙️ Backend — /backend
+shell
+Copy code
+
+### ⚙️ Backend — `/backend`
 backend/
-├── app.py                 # Main FastAPI server
-├── recommender.py         # Core ML logic (LLaMA, embeddings, similarity)
-├── evaluator.py           # Accuracy, metrics & dataset evaluation
-├── models.py              # Pydantic data models
+├── app.py # Main FastAPI application
+├── recommender.py # AI logic (LLaMA, embeddings, similarity)
+├── evaluator.py # Accuracy & metrics evaluation
+├── models.py # Pydantic schemas
 ├── data/
-│   ├── tickets.json       # Stored support tickets
-│   ├── knowledge.json     # Knowledge base articles
-│   ├── feedback.json      # User feedback data
+│ ├── tickets.json # Tickets data
+│ ├── knowledge.json # Knowledge articles
+│ ├── feedback.json # Feedback data
 ├── logs/
-│   ├── recommendation_logs.csv
-│   ├── alerts.log
-│   ├── system_monitor.log
+│ ├── alerts.log
+│ ├── system_monitor.log
+│ ├── recommendation_logs.csv
 ├── reports/
-│   └── coverage_report.csv
-└── .env                   # Environment variables (Groq & Slack)
+│ └── coverage_report.csv
+└── .env # API keys and config
 
-🧠 How It Works
+yaml
+Copy code
 
-Ticket Creation:
-Users submit an issue through the frontend.
-→ Backend classifies the ticket using Groq LLaMA.
-→ Tags are generated and matching KB articles are recommended.
+---
 
-Feedback Update:
-Feedback is stored per ticket & article combination.
-If feedback is submitted again, it overwrites the previous one.
+## ⚙️ Installation & Setup
 
-Accuracy Monitoring:
-System computes real-time accuracy based on feedback.
-If accuracy < threshold, an alert is triggered & sent to Slack.
-
-Alert Management:
-Alerts are automatically deleted from local logs once confirmed as sent to Slack.
-
-Evaluation:
-Admin can run offline evaluations on datasets to validate model accuracy and coverage.
-
-🧰 Tech Stack
-Layer	Technology
-Frontend	React.js, CSS, Tailwind
-Backend	FastAPI (Python 3.10+)
-AI/ML	spaCy, NumPy, Groq API (LLaMA)
-Data Storage	JSON, CSV Logs
-Integration	Slack Webhooks
-Deployment	Render / Localhost
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/ai-support-engine.git
-cd ai-support-engine
-
-2️⃣ Backend Setup
+### 🧩 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Sreejamanthena/AI-Knowledge-Engine.git
+cd AI-Knowledge-Engine
+⚙️ 2️⃣ Backend Setup
+bash
+Copy code
 cd backend
 pip install -r requirements.txt
+Create a .env file inside backend/:
 
-
-Create a .env file in the backend folder:
-
+env
+Copy code
 GROQ_API_KEY=your_groq_api_key_here
 SLACK_WEBHOOK_URL=your_slack_webhook_url_here
+Run the backend:
 
-
-Run the FastAPI backend:
-
+bash
+Copy code
 uvicorn app:app --reload
+📍 Visit API Docs → http://127.0.0.1:8000/docs
 
-
-Visit API docs:
-➡️ http://127.0.0.1:8000/docs
-
-3️⃣ Frontend Setup
+💻 3️⃣ Frontend Setup
+bash
+Copy code
 cd frontend
 npm install
 npm start
+The React app will launch automatically at http://localhost:3000
 
-🧩 Sample Ticket Examples
-Name	Issue	Description
-Rahul Sharma	Refund not received	I returned my jacket 5 days ago, but I haven’t received any refund yet.
-Neha Patel	Delayed delivery	My parcel shows dispatched since last week, but it hasn’t reached me yet.
-Arjun Verma	Payment failure	Payment failed, but the amount was deducted from my bank account.
+🧠 How It Works
+Ticket Creation:
+
+User submits a new support ticket.
+
+The backend classifies and tags the issue using Groq’s LLaMA model.
+
+Relevant KB articles are recommended instantly.
+
+Feedback Tracking:
+
+Feedback per ticket-article pair is recorded.
+
+If new feedback is given, old feedback is overwritten.
+
+Accuracy Monitoring:
+
+System calculates real-time accuracy based on feedback.
+
+If accuracy < 60%, Slack alerts are triggered.
+
+Alert Management:
+
+Alerts are auto-removed once successfully sent to Slack.
+
+Evaluation:
+
+Admins can run dataset evaluations to verify system accuracy and coverage.
+
+🧾 Sample Ticket Examples
+Customer Name	Issue	Description
+Rahul Sharma	Refund not received	I returned my jacket 5 days ago but still haven’t got my refund.
+Neha Patel	Delayed delivery	My order has been marked dispatched for a week but not delivered.
+Arjun Verma	Payment failed	Payment failed during checkout but amount was deducted.
+Sneha Reddy	Wrong product delivered	I received the wrong size and color of shoes.
+Rakesh Gupta	Unable to cancel order	I want to cancel my order placed today but can’t find the option.
+
 📊 Evaluation Metrics
 Metric	Description
-Accuracy	% of correct feedback from total feedback
-Coverage	% of tickets with recommendations
-Resolution Rate	% of resolved tickets after recommendations
-Alerts	Triggered if accuracy < 60%
-🔔 Slack Integration
+Accuracy	% of correct feedback vs total feedback
+Coverage	% of tickets with valid recommendations
+Resolution Rate	% of resolved tickets among recommended
+Alerts	Triggered when accuracy < threshold
 
-Whenever accuracy drops below 60%, the backend:
+🔔 Slack Alert System
+If system accuracy < 60%, an alert is logged locally.
 
-Logs the alert locally
+The same message is automatically sent to a configured Slack channel.
 
-Sends a notification to the configured Slack channel
+After a successful send, the alert entry is deleted from the local JSON file.
 
-Deletes the alert from local storage after confirmation
+🧰 Tech Stack
+Layer	Technology
+Frontend	React.js, Tailwind, CSS
+Backend	FastAPI, Python 3.10+
+AI/ML	spaCy, NumPy, Groq LLaMA
+Storage	JSON, CSV
+Integration	Slack Webhooks
+Deployment	Render / Localhost
 
+🧩 Future Enhancements
+Add multilingual support (Hindi + regional)
+
+Integrate FAISS / ChromaDB for advanced semantic retrieval
+
+Add auto-learning feedback re-ranking
+
+Deploy as a cloud-native microservice
 
 👩‍💻 Author
-
 Manthena Sai Phani Sreeja
-📧 Full-Stack Developer & AI Engineer
+💡 Full-Stack Developer & AI Engineer
+📧 GitHub Profile
 
 🪪 License
-
 This project is licensed under the MIT License.
 
 🙌 Acknowledgements
+Groq API — LLaMA-3 model for smart classification
 
-Groq API for fast LLaMA model inference
+FastAPI — high-performance backend framework
 
-FastAPI for the backend framework
+React.js — modern frontend UI
 
-React.js for frontend
+Slack API — real-time notifications
 
-Slack API for real-time alerting
+spaCy + NumPy — NLP and embeddings
 
-spaCy and NumPy for text processing and embeddings
+🌟 Feedback
+If you found this project helpful, please ⭐ the repository and share your feedback!
+
+yaml
+Copy code
+
+---
+
+Would you like me to include **badges** (e.g., Python version, FastAPI, React, license, and build status) at the top?  
+It’ll make your GitHub page look even more professional (like a portfolio-ready project).
