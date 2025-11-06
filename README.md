@@ -34,18 +34,15 @@ A modern web interface to manage tickets, run evaluations, check alerts, and vie
 ## 🏗️ System Architecture
 
 Frontend (React)
-│
-▼
+      │
+      ▼
 FastAPI Backend (app.py)
-│
-▼
+      │
+      ▼
 Recommender Engine (Groq-powered LLaMA)
-│
-▼
-JSON Data Storage (tickets, feedback, knowledge, alerts)
-
-yaml
-Copy code
+      │
+      ▼
+JSON Data Store (tickets, feedback, knowledge, alerts)
 
 ---
 
