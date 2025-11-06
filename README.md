@@ -66,8 +66,7 @@ src/
 ├── index.js
 └── styles.css
 
-shell
-Copy code
+
 
 ### ⚙️ Backend — `/backend`
 backend/
@@ -86,9 +85,6 @@ backend/
 ├── reports/
 │ └── coverage_report.csv
 └── .env # API keys and config
-
-yaml
-Copy code
 
 ---
 
@@ -215,10 +211,4 @@ spaCy + NumPy — NLP and embeddings
 🌟 Feedback
 If you found this project helpful, please ⭐ the repository and share your feedback!
 
-yaml
-Copy code
 
----
-
-Would you like me to include **badges** (e.g., Python version, FastAPI, React, license, and build status) at the top?  
-It’ll make your GitHub page look even more professional (like a portfolio-ready project).
